@@ -3,10 +3,12 @@ package eu.planlos.datadogdemo.controller;
 import io.micrometer.core.annotation.Timed;
 import org.springframework.http.ResponseEntity;
 import org.springframework.scheduling.annotation.Scheduled;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.Random;
 
+@Controller
 public class TimedController {
 
     @Timed(value = "timedApi", description = "A timed API in a demo")
